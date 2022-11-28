@@ -19,9 +19,7 @@ export class ServerCreatedPrecondition extends Precondition
 				let serverInfo = await ServerModel.findOne(condition).lean();
 				if (!serverInfo) 
 				{
-					await ServerModel.create({
-						guildId: message.guildId
-					});
+					await ServerModel.create({guildId: message.guildId});
 				}
 			}
 			return this.ok();
@@ -43,7 +41,8 @@ export class ServerCreatedPrecondition extends Precondition
 	}
 }
 declare module '@sapphire/framework' {
-	interface Preconditions {
+	interface Preconditions 
+	{
 		ServerCreated: never;
 	}
 }
