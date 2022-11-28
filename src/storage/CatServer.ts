@@ -20,7 +20,3 @@ export class CatServer
 	}
 }
 export const catServers = new Map<string, CatServer>();
-// export const
-// {
-//
-// }

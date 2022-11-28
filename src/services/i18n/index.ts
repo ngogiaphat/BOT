@@ -5,7 +5,8 @@ const trans = (key: string, lng = null, opts = null) => {
 		lng: lng,
 		ns: null
 	};
-	if (opts) {
+	if (opts) 
+	{
 		var objArr = Object.entries(opts).map(([key, value]) => ({ key, value }));
 		objArr.forEach((val) => {
 			options[val.key] = val.value;
@@ -14,7 +15,6 @@ const trans = (key: string, lng = null, opts = null) => {
 	let content = i18next.t(key, options);
 	return content;
 };
-
 const emoji = (key: string) => {
 	let options = {
 		lng: 'cat',
@@ -23,5 +23,4 @@ const emoji = (key: string) => {
 	let content = i18next.t(key, options);
 	return content;
 };
-
 export { trans, emoji };

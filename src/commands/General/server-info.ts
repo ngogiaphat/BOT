@@ -14,7 +14,8 @@ import { EmbedFieldData, GuildChannel, GuildMember, MessageEmbed, ThreadChannel 
 	description: 'general.server_info.description',
 	requiredClientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES']
 })
-export class ServerInfoCommand extends CatCommand {
+export class ServerInfoCommand extends CatCommand 
+{
 	public async run(message: Message): Promise<Message | void> {
 		const { client, trans, emoji } = this.container;
 		const guildId = message.guildId;
